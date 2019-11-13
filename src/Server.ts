@@ -4,8 +4,9 @@
  */
 
 import * as express from 'express';
-import * as path from "path";
 import * as bodyParser from "body-parser";
+import * as http from 'http';
+import {WinstonLogger} from "./log/WinstonLogger";
 
 export class Server
 {
@@ -27,6 +28,8 @@ export class Server
         // Request 에 자동으로 body 속성 추가 및 인코딩, extended 는 중첩된 객체 표현 허용 여부
         Server.app.use(bodyParser.urlencoded({extended:false}));
         Server.app.use(bodyParser.json());
+        // 서버 로그 기록용 logger 초기화
+        WinstonLogger.init();
     }
 
     /**
@@ -34,7 +37,10 @@ export class Server
      */
     private serverStart():void
     {
-        
+        http.createServer().listen(Server.app.get('port'), () =>
+        {
+            console.log("Server Start. PORT : " + Server.app.get('port'));
+        });
     }
 }
 

@@ -53,3 +53,4 @@ var WinstonLogger = /** @class */ (function () {
     return WinstonLogger;
 }());
 exports.WinstonLogger = WinstonLogger;
+//# sourceMappingURL=WinstonLogger.js.map
