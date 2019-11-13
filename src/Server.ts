@@ -4,6 +4,8 @@
  */
 
 import * as express from 'express';
+import * as path from "path";
+import * as bodyParser from "body-parser";
 
 export class Server
 {
@@ -11,7 +13,8 @@ export class Server
 
     constructor()
     {
-
+        this.init();
+        this.serverStart();
     }
 
     /**
@@ -19,7 +22,11 @@ export class Server
      */
     private init():void
     {
-        
+        // 포트 설정
+        Server.app.set('port', process.env.PORT || 2626);
+        // Request 에 자동으로 body 속성 추가 및 인코딩, extended 는 중첩된 객체 표현 허용 여부
+        Server.app.use(bodyParser.urlencoded({extended:false}));
+        Server.app.use(bodyParser.json());
     }
 
     /**
