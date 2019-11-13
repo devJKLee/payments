@@ -1,0 +1,36 @@
+{
+  "name": "payments",
+  "version": "1.0.0",
+  "description": "(주)아이엠폼의 동네 전단지(이하 동전) 컨텐츠의 결제 시스템 구축",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devJKLee/payments.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.0",
+    "@types/sequelize": "^4.27.37",
+    "@types/typescript": "^2.0.0",
+    "@types/ua-parser-js": "^0.7.33",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "method-override": "^3.0.0",
+    "mysql2": "^1.6.5",
+    "sequelize": "^4.42.0",
+    "sequelize-typescript": "^0.6.7",
+    "typescript": "^3.2.2",
+    "ua-parser-js": "^0.7.19",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.3.3"
+  },
+  "bugs": {
+    "url": "https://github.com/devJKLee/payments/issues"
+  },
+  "homepage": "https://github.com/devJKLee/payments#readme"
+}
